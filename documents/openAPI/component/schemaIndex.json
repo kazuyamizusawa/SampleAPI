@@ -1,0 +1,14 @@
+{
+  "ResCapitalInfoList": {
+    "$ref": "./schema/response/resCapitalInfoList.json"
+  },
+  "CapitalInfo": {
+    "$ref": "./schema/model/capitalInfo.json"
+  },
+  "ResCountryInfoList": {
+    "$ref": "./schema/response/resCountryInfoList.json"
+  },
+  "CountryInfo": {
+    "$ref": "./schema/model/countryInfo.json"
+  }
+}

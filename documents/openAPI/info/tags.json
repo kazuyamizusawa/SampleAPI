@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Country",
+    "description": "国に関する操作API"
+  },
+  {
+    "name": "Capital",
+    "description": "首都に対する操作API"
+  }
+]

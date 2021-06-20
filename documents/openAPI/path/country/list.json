@@ -1,0 +1,25 @@
+{
+  "post": {
+    "tags": [
+      "Country"
+    ],
+    "summary": "世界各国の国情報を返却する。※Sampleとしてアメリカ、インド、オーストラリア、日本とする。",
+    "description": "国情報として国名、人口、主な産業を返却する",
+    "operationId": "getCountryInfoList",
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ResCountryInfoList"
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorixed"
+      }
+    }
+  }
+}

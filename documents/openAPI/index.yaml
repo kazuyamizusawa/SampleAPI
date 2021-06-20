@@ -1,0 +1,11 @@
+openapi: 3.0.0
+servers:
+  $ref: ./info/servers.json
+info:
+  $ref: ./info/info.json
+tags:
+  $ref: ./info/tags.json
+paths:
+  $ref: ./path/index.json
+components:
+  $ref: ./component/index.json

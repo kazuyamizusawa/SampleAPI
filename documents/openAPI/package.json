@@ -1,0 +1,15 @@
+{
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kazuyamizusawa/SampleAPI.git"
+    },
+    "license": "MIT",
+    "scripts": {
+        "build-sample-api": "node resolve.js > ./../SampleAPI.yaml"
+    },
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "js-yaml": "^3.11.0",
+        "json-refs": "^3.0.4"
+    }
+}

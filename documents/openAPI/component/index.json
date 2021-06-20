@@ -1,0 +1,11 @@
+{
+	"parameters": {
+		"$ref": "./parameters.json"
+	},
+	"requestBodies": {
+		"$ref": "./requests.json"
+	},
+	"schemas": {
+		"$ref": "./schemaIndex.json"
+	}
+}

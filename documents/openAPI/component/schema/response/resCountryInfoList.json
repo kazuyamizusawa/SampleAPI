@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "description": "国情報結果",
+  "properties": {
+    "capitalInfoList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CountryInfo"
+      },
+      "example": [
+        {"countryName": "United States of America", "population": "約 33009 万人", "majorIndustries": "工業全般"},
+        {"countryName": "India", "population": "約 137860 万人", "majorIndustries": "農業、鉱業"},
+        {"countryName": "Australia", "population": "約 2573 万人", "majorIndustries": "農業、鉱業"},
+        {"countryName": "Japan", "population": "約 12630 万人", "majorIndustries": "製造業"}
+      ]
+    }
+  },
+  "xml": {
+    "name": "ResCountryInfoList"
+  }
+}

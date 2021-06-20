@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "description": "首都情報",
+  "properties": {
+    "capitalName": {
+      "type": "string",
+      "description": "首都名",
+      "example": "Tokyo"
+    },
+    "countryName": {
+      "type": "string",
+      "description": "国名",
+      "example": "Japan"
+    },
+    "timeDifference": {
+      "type": "string",
+      "description": "協定世界時との時差",
+      "example": "+9:00"
+    }
+  },
+  "xml": {
+    "name": "CapitalInfo"
+  }
+}

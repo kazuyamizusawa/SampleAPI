@@ -1,0 +1,8 @@
+{
+	"/country/list": {
+		"$ref": "./country/list.json"
+	},
+	"/capital/list": {
+		"$ref": "./capital/list.json"
+	}
+}

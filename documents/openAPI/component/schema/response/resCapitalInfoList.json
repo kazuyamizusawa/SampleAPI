@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "description": "首都情報結果",
+  "properties": {
+    "capitalInfoList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CapitalInfo"
+      },
+      "example": [
+        {"capitalName": "Washington", "countryName": "United States of America", "timeDifference": "-4:00"},
+        {"capitalName": "New Delhi", "countryName": "India", "timeDifference": "+5:30"},
+        {"capitalName": "Canberra", "countryName": "Australia", "timeDifference": "+10:00"},
+        {"capitalName": "Tokyo", "countryName": "Japan", "timeDifference": "+9:00"}
+      ]
+    }
+  },
+  "xml": {
+    "name": "ResCapitalInfoList"
+  }
+}

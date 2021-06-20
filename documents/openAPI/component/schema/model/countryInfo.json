@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "description": "国情報",
+  "properties": {
+    "countryName": {
+      "type": "string",
+      "description": "国名",
+      "example": "Japan"
+    },
+    "population": {
+      "type": "string",
+      "description": "人口数",
+      "example": "約 126,300,000 人"
+    },
+    "majorIndustries": {
+      "type": "string",
+      "description": "主要産業",
+      "example": "製造業"
+    }
+  },
+  "xml": {
+    "name": "CountryInfo"
+  }
+}

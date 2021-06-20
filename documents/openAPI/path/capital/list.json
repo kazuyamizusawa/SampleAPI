@@ -1,0 +1,25 @@
+{
+  "post": {
+    "tags": [
+      "Capital"
+    ],
+    "summary": "世界各国の首都情報を返却する。※Sampleとしてアメリカ、インド、オーストラリア、日本とする。",
+    "description": "首都情報として首都名、国名、協定世界時との時差を返却する",
+    "operationId": "getCapitalInfoList",
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ResCapitalInfoList"
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorixed"
+      }
+    }
+  }
+}

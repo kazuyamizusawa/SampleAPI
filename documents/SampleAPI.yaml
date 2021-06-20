@@ -1,0 +1,132 @@
+openapi: 3.0.0
+servers:
+  - url: 'http://localhost:8080/'
+info:
+  description: OpenAPIによるWebAPI設計
+  version: 0.1.0
+  title: Sample API
+tags:
+  - name: Country
+    description: 国に関する操作API
+  - name: Capital
+    description: 首都に対する操作API
+paths:
+  /country/list:
+    post:
+      tags:
+        - Country
+      summary: 世界各国の国情報を返却する。※Sampleとしてアメリカ、インド、オーストラリア、日本とする。
+      description: 国情報として国名、人口、主な産業を返却する
+      operationId: getCountryInfoList
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResCountryInfoList'
+        '401':
+          description: Unauthorixed
+  /capital/list:
+    post:
+      tags:
+        - Capital
+      summary: 世界各国の首都情報を返却する。※Sampleとしてアメリカ、インド、オーストラリア、日本とする。
+      description: 首都情報として首都名、国名、協定世界時との時差を返却する
+      operationId: getCapitalInfoList
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResCapitalInfoList'
+        '401':
+          description: Unauthorixed
+components:
+  parameters: {}
+  requestBodies: {}
+  schemas:
+    ResCapitalInfoList:
+      type: object
+      description: 首都情報結果
+      properties:
+        capitalInfoList:
+          type: array
+          items:
+            $ref: '#/components/schemas/CapitalInfo'
+          example:
+            - capitalName: Washington
+              countryName: United States of America
+              timeDifference: '-4:00'
+            - capitalName: New Delhi
+              countryName: India
+              timeDifference: '+5:30'
+            - capitalName: Canberra
+              countryName: Australia
+              timeDifference: '+10:00'
+            - capitalName: Tokyo
+              countryName: Japan
+              timeDifference: '+9:00'
+      xml:
+        name: ResCapitalInfoList
+    CapitalInfo:
+      type: object
+      description: 首都情報
+      properties:
+        capitalName:
+          type: string
+          description: 首都名
+          example: Tokyo
+        countryName:
+          type: string
+          description: 国名
+          example: Japan
+        timeDifference:
+          type: string
+          description: 協定世界時との時差
+          example: '+9:00'
+      xml:
+        name: CapitalInfo
+    ResCountryInfoList:
+      type: object
+      description: 国情報結果
+      properties:
+        capitalInfoList:
+          type: array
+          items:
+            $ref: '#/components/schemas/CountryInfo'
+          example:
+            - countryName: United States of America
+              population: 約 33009 万人
+              majorIndustries: 工業全般
+            - countryName: India
+              population: 約 137860 万人
+              majorIndustries: 農業、鉱業
+            - countryName: Australia
+              population: 約 2573 万人
+              majorIndustries: 農業、鉱業
+            - countryName: Japan
+              population: 約 12630 万人
+              majorIndustries: 製造業
+      xml:
+        name: ResCountryInfoList
+    CountryInfo:
+      type: object
+      description: 国情報
+      properties:
+        countryName:
+          type: string
+          description: 国名
+          example: Japan
+        population:
+          type: string
+          description: 人口数
+          example: '約 126,300,000 人'
+        majorIndustries:
+          type: string
+          description: 主要産業
+          example: 製造業
+      xml:
+        name: CountryInfo
+
